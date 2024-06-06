@@ -1,7 +1,11 @@
-import React from "react";
+import Navigation from "./component/Navigation";
 
-const App = () => {
-  return <div>App</div>;
-};
+function App() {
+  return (
+    <div className="dark:bg-gray-900 dark:text-white">
+      <Navigation />
+    </div>
+  );
+}
 
 export default App;
