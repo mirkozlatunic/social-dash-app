@@ -2,7 +2,7 @@ import { CardLarge, CardSmall } from "./Card";
 
 function Main() {
   return (
-    <div>
+    <div className="flex justify-center gap-x-7.5">
       <CardLarge />
     </div>
   );
