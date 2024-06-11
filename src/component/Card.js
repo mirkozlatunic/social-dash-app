@@ -1,53 +1,15 @@
+import { contentLarge, contentSmall } from "../constants/constants";
 import { IoLogoFacebook } from "react-icons/io";
-import { TiArrowSortedUp, TiArrowSortedDown } from "react-icons/ti";
-import { FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-
-const contentLarge = [
-  {
-    border: "border-t-blue-500",
-    icon: <IoLogoFacebook className="mr-2 size-6 text-blue-500" />,
-    followers: "1987",
-    status: <TiArrowSortedUp className="mr-1 text-green-500" />,
-    number: "12 Today",
-    arrow: "text-green-500",
-  },
-  {
-    border: "border-t-sky-500",
-    icon: <FaTwitter className="mr-2 size-6 text-sky-500" />,
-    followers: "1044",
-    status: <TiArrowSortedUp className="mr-1 text-green-500" />,
-    number: "99 Today",
-    arrow: "text-green-500",
-  },
-  {
-    border: "gradient-border",
-    icon: (
-      <FaInstagram className="mr-2 size-6 text-gradient-to-tr from-amber-200 via-ember-500 to-pink-500" />
-    ),
-    followers: "11k",
-    status: <TiArrowSortedUp className="mr-1 text-green-500" />,
-    number: "1099 Today",
-    arrow: "text-green-500",
-  },
-  {
-    border: "border-t-red-500",
-    icon: <FaYoutube className="mr-2 size-6 text-red-500" />,
-    followers: "8234",
-    status: <TiArrowSortedDown className="mr-1 text-red-500" />,
-    number: "144 Today",
-    arrow: "text-red-500",
-  },
-];
 
 const renderedCardLarge = contentLarge.map((content) => {
   return (
     <div className="flex gap-x-7">
       <div
-        className={`flex flex-col max-h-54 max-w-64 px-16 pt-8 pb-6 bg-slate-100 rounded items-center ${content.border} border-t-4 dark:bg-blue-950/30`}
+        className={`flex flex-col max-h-54 w-64 px-16 pt-8 pb-6 bg-slate-100 rounded items-center ${content.border} border-t-4 dark:bg-blue-950/30 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200`}
       >
         <div className="flex items-center mb-7">
           {content.icon}
-          <p className="text-gray-500 text-xs">@nathanf</p>
+          <p className="text-gray-500 text-xs">{content.user}</p>
         </div>
         <div className="flex flex-col items-center mb-6">
           <p className="font-extrabold text-5xl">{content.followers}</p>
@@ -66,6 +28,19 @@ function CardLarge() {
   return <div className="flex gap-x-7">{renderedCardLarge}</div>;
 }
 
-function CardSmall() {}
+function CardSmall() {
+  return (
+    <div>
+      <div className="flex rounded dark:bg-blue-950/30 bg-slate-100 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200 w-64">
+        <div className="grid grid-cols-2 p-6 gap-10">
+          <div className="text-gray-500 text-xs">Page Reviews</div>
+          <IoLogoFacebook className="size-6 text-blue-500" />
+          <div classNem="font-extrabold text-2xl">text</div>
+          <div className="text-right">text</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export { CardLarge, CardSmall };
