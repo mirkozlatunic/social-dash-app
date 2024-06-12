@@ -1,5 +1,4 @@
 import { contentLarge, contentSmall } from "../constants/constants";
-import { IoLogoFacebook } from "react-icons/io";
 
 const renderedCardLarge = contentLarge.map((content) => {
   return (
@@ -25,20 +24,37 @@ const renderedCardLarge = contentLarge.map((content) => {
 });
 
 function CardLarge() {
-  return <div className="flex gap-x-7">{renderedCardLarge}</div>;
+  return (
+    <div className="flex gap-7 px-40 flex-wrap justify-center">
+      {renderedCardLarge}
+    </div>
+  );
 }
+
+const renderedCardSmall = contentSmall.map((content) => {
+  return (
+    <div>
+      <div className="rounded dark:bg-blue-950/30 bg-slate-100 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200 p-6 w-64 ">
+        <div className="flex justify-between items-center pb-6">
+          <div className="text-gray-500 text-sm">{content.text}</div>
+          {content.icon}
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="font-extrabold text-2xl">{content.number}</div>
+
+          <p className={`flex items-center ${content.arrow}`}>
+            {content.status} {content.precent}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+});
 
 function CardSmall() {
   return (
-    <div>
-      <div className="flex rounded dark:bg-blue-950/30 bg-slate-100 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200 w-64">
-        <div className="grid grid-cols-2 p-6 gap-10">
-          <div className="text-gray-500 text-xs">Page Reviews</div>
-          <IoLogoFacebook className="size-6 text-blue-500" />
-          <div classNem="font-extrabold text-2xl">text</div>
-          <div className="text-right">text</div>
-        </div>
-      </div>
+    <div className="flex gap-7 flex-wrap px-40 justify-center pb-16">
+      {renderedCardSmall}
     </div>
   );
 }
