@@ -4,7 +4,7 @@ const renderedCardLarge = contentLarge.map((content) => {
   return (
     <div className="flex gap-x-7">
       <div
-        className={`flex flex-col max-h-54 w-64 px-16 pt-8 pb-6 bg-slate-100 rounded items-center ${content.border} border-t-4 dark:bg-blue-950/30 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200`}
+        className={`flex flex-col max-h-54 sm:w-64 w-80 px-16 pt-8 pb-6 bg-slate-100 rounded items-center ${content.border} border-t-4 dark:bg-blue-950/30 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200`}
       >
         <div className="flex items-center mb-7">
           {content.icon}
@@ -25,7 +25,7 @@ const renderedCardLarge = contentLarge.map((content) => {
 
 function CardLarge() {
   return (
-    <div className="flex gap-7 px-40 flex-wrap justify-center">
+    <div className="flex gap-7 sm:px-40 px-6 flex-wrap justify-center">
       {renderedCardLarge}
     </div>
   );
@@ -34,7 +34,7 @@ function CardLarge() {
 const renderedCardSmall = contentSmall.map((content) => {
   return (
     <div>
-      <div className="rounded dark:bg-blue-950/30 bg-slate-100 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200 p-6 w-64 ">
+      <div className="rounded dark:bg-blue-950/30 bg-slate-100 cursor-pointer hover:dark:bg-blue-900/50 hover:bg-slate-200 p-6 sm:w-64 w-80">
         <div className="flex justify-between items-center pb-6">
           <div className="text-gray-500 text-sm">{content.text}</div>
           {content.icon}
@@ -53,7 +53,7 @@ const renderedCardSmall = contentSmall.map((content) => {
 
 function CardSmall() {
   return (
-    <div className="flex gap-7 flex-wrap px-40 justify-center pb-16">
+    <div className="flex gap-7 flex-wrap sm:px-40 px-6 justify-center pb-16">
       {renderedCardSmall}
     </div>
   );
