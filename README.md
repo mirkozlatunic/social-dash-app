@@ -29,6 +29,6 @@ For this project, I utilized ReactJS to build the application and implemented Ta
 
 ## <a name="link-page">🔋 Link to Page</a>
 
-- Live Site URL: [GitHub Page](https://mirkozlatunic.github.io/podcast-page/)
+- Live Site URL: [GitHub Page](https://mirkozlatunic.github.io/social-dash-app/)
 
 ## <a name="improvements">🛠️ Improvements Ideas</a>
