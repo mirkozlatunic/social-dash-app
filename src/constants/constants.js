@@ -1,7 +1,8 @@
 import { IoLogoFacebook } from "react-icons/io";
 import { TiArrowSortedUp, TiArrowSortedDown } from "react-icons/ti";
-import { FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import instagramLogo from "../assets/instagram.svg";
+import youtubeLogo from "../assets/icon-youtube.svg";
 
 const contentLarge = [
   {
@@ -24,7 +25,7 @@ const contentLarge = [
   },
   {
     border: "border-t-pink-500",
-    icon: <img src={instagramLogo} alt="instagram" className="mr-2 " />,
+    icon: <img src={youtubeLogo} alt="youtube" className="mr-2 size-6" />,
     user: "@realnathanf",
     followers: "11k",
     status: <TiArrowSortedUp className="mr-1 text-green-500" />,
@@ -33,7 +34,7 @@ const contentLarge = [
   },
   {
     border: "border-t-red-500",
-    icon: <FaYoutube className="mr-2 size-6 text-red-500" />,
+    icon: <img src={instagramLogo} alt="instagram" className="mr-2 size-6" />,
     user: "Nathan F.",
     followers: "8234",
     status: <TiArrowSortedDown className="mr-1 text-red-500" />,
@@ -61,7 +62,7 @@ const contentSmall = [
   },
   {
     text: "Likes",
-    icon: <img src={instagramLogo} alt="instagram" />,
+    icon: <img src={instagramLogo} alt="instagram" className="size-6" />,
     number: "5462",
     status: <TiArrowSortedUp className="mr-1 text-green-500" />,
     precent: "2257%",
@@ -69,7 +70,7 @@ const contentSmall = [
   },
   {
     text: "Profile Views",
-    icon: <img src={instagramLogo} alt="instagram" />,
+    icon: <img src={instagramLogo} alt="instagram" className="size-6" />,
     number: "52k",
     status: <TiArrowSortedUp className="mr-1 text-green-500" />,
     precent: "1375%",
@@ -93,7 +94,7 @@ const contentSmall = [
   },
   {
     text: "Likes",
-    icon: <FaYoutube className="size-6 text-red-500" />,
+    icon: <img src={youtubeLogo} alt="youtube" className="size-6" />,
     number: "107",
     status: <TiArrowSortedDown className="mr-1 text-red-500" />,
     precent: "19%",
@@ -101,7 +102,7 @@ const contentSmall = [
   },
   {
     text: "Total Views",
-    icon: <FaYoutube className="size-6 text-red-500" />,
+    icon: <img src={youtubeLogo} alt="youtube" className="size-6" />,
     number: "1407",
     status: <TiArrowSortedUp className="mr-1 text-red-500" />,
     precent: "12%",
